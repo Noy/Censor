@@ -20,7 +20,7 @@ object Censor {
   class ThisAwfulProject extends Censor
 
   // Use the replacementWords variable
-  print(new ThisAwfulProject().change("This is the worst scala project ever", replacementWords))
+  println(new ThisAwfulProject().change("This is the worst scala project ever", replacementWords))
 
   def main(args: Array[String]): Unit = {
     // From a txt file, had to do research, make sure your file is in the root
@@ -32,11 +32,6 @@ object Censor {
     // go through the file and find the specific words, replace them with ->
     lines.foreach(line => words += change(line.split(" -> ")))
     // Our statement
-    print(new ThisAwfulProject().change("I am expecting you to hate this terrible project", words))
-  }
-
-  // own print method, cuz y not
-  def print(x: String): Unit = {
-    println(x)
+    println(new ThisAwfulProject().change("I am expecting you to hate this terrible project", words))
   }
 }
